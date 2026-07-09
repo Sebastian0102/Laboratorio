@@ -1,82 +1,75 @@
-# SSH Hardening & Audit Automation Tool
+# Professional README Template & Guide
  
 ## Descripción del Proyecto
  
-Este proyecto es una herramienta de automatización diseñada para auditar y aplicar configuraciones de seguridad (hardening) en el servicio SSH de servidores basados en Linux (Ubuntu/Debian). Utiliza **Ansible** para gestionar la configuración de forma masiva y segura, reduciendo la superficie de ataque contra accesos no autorizados y ataques de fuerza bruta.
+**Professional README Template** es un framework de documentación diseñado para ingenieros en ciberseguridad y automatización. Este proyecto proporciona una estructura estandarizada y automatizada en Markdown para documentar repositorios de código de forma clara, asegurando que cualquier usuario o administrador de sistemas pueda entender, instalar y ejecutar un proyecto técnico sin ambigüedades.
+ 
+El objetivo es erradicar la falta de documentación en los entornos de desarrollo (DevOps) mediante una plantilla preconfigurada que cumple con los más altos estándares de la industria.
  
 ---
  
-## Requisitos del Software
+## Requisitos del Sistema
  
-Para ejecutar este playbook de automatización, el nodo de control necesita tener instalado el siguiente software:
+Para editar, visualizar y trabajar con esta guía de creación de README, se requiere:
  
-- **Sistema Operativo:** Linux (Ubuntu 22.04 LTS o superior recomendado) o macOS.
-- **Python:** Versión 3.10 o superior.
-- **Ansible:** Versión 2.15 o superior.
-- **Acceso SSH:** Llaves SSH configuradas previamente con el usuario administrador (`sudo`) en los servidores destino.
+- **Editor de Texto:** Visual Studio Code, Obsidian o cualquier entorno compatible con Markdown.
+- **Extensiones Recomendadas:** *Markdown All in One* o *Markdown Preview Enhanced* (para previsualización en tiempo real).
+- **Control de Versiones:** Git instalado localmente y una cuenta activa en GitHub.
 ---
  
-## Instrucciones de Instalación Paso a Paso
+## Instrucciones de Instalación y Uso (Paso a Paso)
  
-### 1. Clonar el repositorio
+Siga estos pasos para implementar esta plantilla profesional en cualquiera de sus proyectos de software o automatización:
  
-Primero, clona este repositorio en tu máquina local o nodo de control de Ansible:
+### 1. Clonar el repositorio de la plantilla
  
+Descargue los archivos base en su máquina local:
+ 
+````bash
+git clone https://github.com/TU_USUARIO/professional-readme-guide.git
+cd professional-readme-guide
+````
+ 
+### 2. Crear un nuevo archivo README en su proyecto
+ 
+Si está iniciando desde cero en un nuevo repositorio, inicialice el archivo con el siguiente comando:
+ 
+````bash
+touch README.md
+````
+ 
+### 3. Estructurar el archivo usando la sintaxis técnica
+ 
+Abra el archivo `README.md` en su editor y asegúrese de incluir los 5 bloques estructurales obligatorios:
+ 
+- **Título y Descripción:** Use un encabezado `#` principal con un subtítulo explicativo.
+- **Prerrequisitos:** Use listas con viñetas (`*`) para enumerar el software necesario.
+- **Bloques de código:** Use tres acentos graves (```bash) para detallar los comandos de instalación.
+---
+ 
+## Ejemplo de Código Markdown
+ 
+A continuación se muestra el fragmento de código exacto que debe utilizar para dar formato a las instrucciones de sus futuros repositorios:
+ 
+````markdown
+### Ejemplo de ejecución de un script de automatización:
 ```bash
-git clone https://github.com/TU_USUARIO/ssh-hardening-automation.git
-cd ssh-hardening-automation
+# 1. Otorgar permisos al script
+chmod +x automatizacion.sh
+ 
+# 2. Ejecutar el despliegue
+sudo ./automatizacion.sh
 ```
- 
-### 2. Instalar Ansible
- 
-Si no tienes Ansible instalado, ejecuta los siguientes comandos en tu terminal:
- 
-```bash
-sudo apt update
-sudo apt install software-properties-common -y
-sudo add-apt-repository --yes --update ppa:ansible/ansible
-sudo apt install ansible -y
-```
- 
-### 3. Configurar el inventario
- 
-Edita el archivo `inventory.ini` e incluye las direcciones IP o dominios de tus servidores objetivos:
- 
-```ini
-[servers]
-192.168.1.50
-192.168.1.51
-```
+````
  
 ---
  
-## Ejemplo de Uso
+## Captura del Resultado Esperado
  
-### Ejecutar la Auditoría y Aplicar los Cambios
- 
-Para aplicar las políticas de seguridad en los servidores listados en el inventario, ejecuta el comando principal utilizando privilegios de `sudo`:
- 
-```bash
-ansible-playbook -i inventory.ini site.yml --ask-become-pass
-```
- 
-### ¿Qué hace este script de automatización?
- 
-1. Deshabilita el acceso del usuario `root` a través de SSH.
-2. Desactiva la autenticación mediante contraseñas (obliga a usar llaves SSH).
-3. Cambia el puerto SSH por defecto (del 22 a un puerto personalizado, ej. 2222).
-4. Configura el tiempo de desconexión por inactividad (`ClientAliveInterval`).
-5. Reinicia el servicio SSH de manera segura para aplicar los cambios.
----
- 
-## Captura de Pantalla del Resultado Esperado
- 
-A continuación se muestra la ejecución exitosa del playbook en la terminal, donde se observa que las tareas se completaron correctamente sin errores (`failed=0`):
- 
-> **Nota:** Recuerda reemplazar esta imagen de ejemplo por una captura de pantalla real de tu terminal ejecutando un comando de Git o Ansible.
+
  
 ---
  
 ## Licencia
  
-Este proyecto está bajo la Licencia MIT. Para más detalles, consulta el archivo [LICENSE](LICENSE) adjunto en este repositorio.
+Este proyecto y su plantilla de documentación están bajo la Licencia MIT. Usted es libre de copiar, modificar y adaptar esta estructura para sus proyectos escolares o profesionales con total libertad.
