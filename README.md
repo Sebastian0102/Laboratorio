@@ -65,7 +65,8 @@ sudo ./automatizacion.sh
 ---
  
 ## Captura del Resultado Esperado
- 
+ <img width="1918" height="861" alt="image" src="https://github.com/user-attachments/assets/6562eefd-1586-4b95-b7f2-013f0fe59cd5" />
+
 
  
 ---
